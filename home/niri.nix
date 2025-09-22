@@ -62,9 +62,26 @@
             y = 16;
           };
         }
+
+        {
+          matches = [
+            {
+              app-id = "steam";
+              title = "^notificationtoasts_\\d+_desktop$";
+            }
+          ];
+          default-floating-position = {
+            x = 10;
+            y = 10;
+            relative-to = "bottom-right";
+          };
+        }
+
         {
           matches = [
             { app-id = "xdg-desktop-portal-gtk"; }
+            { title = "Steam Settings"; }
+            { title = "Friends List"; }
           ];
           open-floating = true;
           default-floating-position = {
@@ -157,6 +174,10 @@
 
       animations = {
         enable = true;
+      };
+
+      environment = {
+        ELECTRON_OZONE_PLATFORM_HINT = "wayland";
       };
 
       binds = with config.lib.niri.actions; {

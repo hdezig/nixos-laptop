@@ -16,6 +16,7 @@
     inputs.noctalia.packages.${system}.default
     inputs.quickshell.packages.${system}.default
 
+    libadwaita
     xwayland-satellite
     bluez
     bluez-tools
