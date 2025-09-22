@@ -62,6 +62,17 @@
             y = 16;
           };
         }
+        {
+          matches = [
+            { app-id = "xdg-desktop-portal-gtk"; }
+          ];
+          open-floating = true;
+          default-floating-position = {
+            relative-to = "top";
+            x = 16;
+            y = 16;
+          };
+        }
       ];
 
       layer-rules = [

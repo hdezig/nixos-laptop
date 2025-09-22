@@ -15,6 +15,8 @@
 
       cursor-style-blink = true;
 
+      background-opacity = 0.8;
+      background-blur = true;
       window-theme = "ghostty";
       config-file = "themes/noctalia";
       window-subtitle = "working-directory";

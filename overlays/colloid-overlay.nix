@@ -1,6 +1,6 @@
 self: super: {
 
-  colloid-icon-theme = super.colloid-icon-theme.overrideAttrs (oldAttrs: rec {
+  colloid-icon-theme = super.colloid-icon-theme.overrideAttrs (oldAttrs: {
 
     version = "latest";
 
@@ -25,5 +25,14 @@ self: super: {
       runHook postInstall
     '';
 
+  });
+
+    niri = super.niri.overrideAttrs (oldAttrs: {
+    src = self.fetchFromGitHub {
+      owner = "visualglitch91";
+      repo = "niri";
+      rev = "3bef27675e80bd73c72cd67c97d5d94785f265b8";
+      sha256 = "M96cjggtxgCA9ddeyqdZTv1LVx92bXuZy84Mill48Lk=";
+    };
   });
 }

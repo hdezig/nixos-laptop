@@ -43,6 +43,7 @@
     nixfmt-rfc-style
     alejandra
     nixd
+    nix-prefetch-github
     _1password-gui-beta
     brightnessctl
     telegram-desktop
