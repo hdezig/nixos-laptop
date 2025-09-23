@@ -54,6 +54,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    vicinae.url = "github:vicinaehq/vicinae";
   };
 
   outputs =
@@ -62,6 +63,7 @@
       nixpkgs,
       home-manager,
       chaotic,
+      vicinae,
       ...
     }@inputs:
     let
@@ -82,13 +84,18 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.hdezg = import ./home;
+            home-manager.users.hdezg = {
+             imports = [
+                ./home 
+                vicinae.homeManagerModules.default
+             ]; 
+            };
             home-manager.extraSpecialArgs = {
               inherit inputs system;
             };
 
             home-manager.sharedModules = [
-              # inputs.chaotic.homeManagerModules.default
+              inputs.chaotic.homeManagerModules.default
               inputs.niri.homeModules.niri
               inputs.zed-extensions.homeManagerModules.default
             ];

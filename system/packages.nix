@@ -33,7 +33,6 @@
     heroic
     curl
     libproxy
-    nh
     ladybird
     nix-prefetch-github
     prismlauncher
@@ -50,5 +49,6 @@
     telegram-desktop
     colloid-icon-theme
     xfce.thunar
+    glib
   ];
 }

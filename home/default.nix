@@ -1,6 +1,5 @@
 {
   pkgs,
-  lib,
   inputs,
   ...
 }:
@@ -11,6 +10,7 @@
     ./zed.nix
     ./niri.nix
     ./helix
+    ./vicinae.nix
   ];
 
   home = {

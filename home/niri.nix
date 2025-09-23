@@ -38,6 +38,7 @@
             { app-id = "dev.zed.Zed"; }
             { app-id = "helium"; }
             { app-id = "ghostty"; }
+            { title = "Steam"; }
           ];
           open-maximized = true;
         }
@@ -82,6 +83,7 @@
             { app-id = "xdg-desktop-portal-gtk"; }
             { title = "Steam Settings"; }
             { title = "Friends List"; }
+            {title = "Add Non-Steam Game";}
           ];
           open-floating = true;
           default-floating-position = {
@@ -212,8 +214,8 @@
           hotkey-overlay.title = "Logout";
         };
         "Mod+D" = {
-          action = spawn "noctalia-shell" "ipc" "call" "launcher" "toggle";
-          hotkey-overlay.title = "Launcher";
+          action = spawn "vicinae";
+          hotkey-overlay.title = "Vicinae launcher";
         };
         "Mod+Alt+L" = {
           action = spawn [

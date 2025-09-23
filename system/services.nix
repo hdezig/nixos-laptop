@@ -64,10 +64,13 @@
     };
   };
 
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 15d";
+  programs.nh = {
+    enable = true;
+    flake = "~/nixos-laptop";
+    clean = {
+      enable = true;
+      extraArgs = "--keep 3  --delete-older-than 15d ";
+    };
   };
 
 }
