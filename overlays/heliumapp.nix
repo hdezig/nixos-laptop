@@ -28,10 +28,10 @@ let
 in
 appimageTools.wrapType2 rec {
   pname = "helium";
-  version = "0.4.7.1";
+  version = "0.4.11.1";
   src = fetchurl {
-    url = "https://github.com/imputnet/helium-linux/releases/download/0.4.7.1/helium-0.4.7.1-x86_64.AppImage";
-    hash = "sha256:b7a64d9cd96c841119f4729545d7b88ed804fdcac99d3878099f338766dfdd2d";
+    url = "https://github.com/imputnet/helium-linux/releases/download/0.4.11.1/helium-0.4.11.1-x86_64.AppImage";
+    hash = "sha256:3780bced75846e227bd444faa69fa3d2e7a2ca3b7417b1c0fce90f88af4e30c2";
   };
 
   extraInstallCommands = ''

@@ -17,6 +17,7 @@
     inputs.quickshell.packages.${system}.default
 
     libadwaita
+    gsettings-desktop-schemas
     xwayland-satellite
     bluez
     bluez-tools
@@ -48,7 +49,7 @@
     brightnessctl
     telegram-desktop
     colloid-icon-theme
-    xfce.thunar
+    nautilus
     glib
   ];
 }

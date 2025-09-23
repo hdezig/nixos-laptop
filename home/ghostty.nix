@@ -18,7 +18,6 @@
       background-opacity = 0.8;
       background-blur = true;
       window-theme = "ghostty";
-      config-file = "themes/noctalia";
       window-subtitle = "working-directory";
       fullscreen = false;
       unfocused-split-opacity = 1.0;
@@ -28,7 +27,7 @@
       keybind = "ctrl+a=toggle_quick_terminal";
       quick-terminal-size = "25%,60%";
 
-      theme = "dark:UltraDark,light:Xcode Light hc";
+      theme = "dark:Ultra Dark,light:Xcode Light hc";
 
       window-padding-balance = true;
       window-padding-x = 0;
