@@ -68,12 +68,19 @@
     }@inputs:
     let
       system = "x86_64-linux";
+      overlays = [
+        inputs.zig.overlays.default
+        inputs.rust-overlay.overlays.default
+        inputs.zed-extensions.overlays.default
+        (import ./overlays)
+      ];
     in
     {
       nixosConfigurations.hdezg = nixpkgs.lib.nixosSystem {
         system = system;
         specialArgs = { inherit inputs system; };
         modules = [
+          { nixpkgs.overlays = overlays; }
           ./system
           ./languages
           chaotic.nixosModules.nyx-cache
@@ -85,10 +92,10 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.hdezg = {
-             imports = [
-                ./home 
+              imports = [
+                ./home
                 vicinae.homeManagerModules.default
-             ]; 
+              ];
             };
             home-manager.backupFileExtension = "backup";
             home-manager.extraSpecialArgs = {

@@ -6,12 +6,6 @@
 }:
 {
 
-  nixpkgs.overlays = [
-    inputs.zed-extensions.overlays.default
-    (import ./../overlays/helium.nix)
-    (import ./../overlays/colloid-overlay.nix)
-  ];
-
   environment.systemPackages = with pkgs; [
     inputs.noctalia.packages.${system}.default
     inputs.quickshell.packages.${system}.default

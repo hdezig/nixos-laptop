@@ -1,10 +1,11 @@
-self: super: {
+final: prev: {
+  helium = prev.callPackage ./heliumapp.nix { };
 
-  colloid-icon-theme = super.colloid-icon-theme.overrideAttrs (oldAttrs: {
+  colloid-icon-theme = prev.colloid-icon-theme.overrideAttrs (oldAttrs: {
 
     version = "latest";
 
-    src = super.fetchFromGitHub {
+    src = prev.fetchFromGitHub {
       owner = "vinceliuice";
       repo = "Colloid-icon-theme";
       rev = "refs/heads/main";
@@ -27,8 +28,8 @@ self: super: {
 
   });
 
-    niri = super.niri.overrideAttrs (oldAttrs: {
-    src = self.fetchFromGitHub {
+  niri = prev.niri.overrideAttrs (oldAttrs: {
+    src = prev.fetchFromGitHub {
       owner = "visualglitch91";
       repo = "niri";
       rev = "3bef27675e80bd73c72cd67c97d5d94785f265b8";

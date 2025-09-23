@@ -5,9 +5,6 @@ let
   });
 in
 {
-
-  nixpkgs.overlays = [ inputs.zig.overlays.default ];
-
   environment.systemPackages = with pkgs; [
     zigpkgs.master
     zls
